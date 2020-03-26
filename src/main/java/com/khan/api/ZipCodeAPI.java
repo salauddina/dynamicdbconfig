@@ -25,4 +25,5 @@ public class ZipCodeAPI {
     public Response getAll() {
         return Response.ok(zipcodeDAO.find("01830", ZipCode.class)).build();
     }
+
 }
