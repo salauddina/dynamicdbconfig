@@ -1,6 +1,7 @@
 package com.khan.dao;
 
 import com.khan.interfaces.EntityDao;
+
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -28,8 +29,8 @@ public class BaseEntityDao<T> implements EntityDao<T> {
     }
 
     @Override
-    public List<T> findAll(final Class<T> entityClass) {
-        return entityManager.createQuery("SELECT t FROM Todo t", entityClass).getResultList();
+    public List<T> findAll(final Class<T> entityClass, final String tableName) {
+        return entityManager.createQuery("SELECT t FROM " + tableName + " t", entityClass).getResultList();
     }
 
     @Override

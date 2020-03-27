@@ -7,7 +7,7 @@ public interface EntityDao<T> {
 
     T find(String id, Class<T> entityClass);
 
-    List<T> findAll(Class<T> entityClass);
+    List<T> findAll(Class<T> entityClass, String tableName);
 
     T update(T entity) throws Exception;
 
