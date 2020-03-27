@@ -1,21 +1,24 @@
 package com.khan.dao;
 
 import com.khan.interfaces.EntityDao;
+import com.khan.interfaces.IdentityDB;
 
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Transactional
-public class BaseEntityDao<T> implements EntityDao<T> {
+public class GenericEntityDao<T> implements EntityDao<T> {
 
     private EntityManager entityManager;
 
-    public BaseEntityDao(EntityManager entityManager) {
+    @Inject
+    public GenericEntityDao(@IdentityDB  EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
-    public BaseEntityDao() {
+    public GenericEntityDao() {
     }
 
     @Override

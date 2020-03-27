@@ -1,6 +1,6 @@
 package com.khan.api;
 
-import com.khan.dao.ZipcodeDAO;
+import com.khan.dao.GenericEntityDao;
 import com.khan.entity.ZipCode;
 
 import javax.enterprise.context.RequestScoped;
@@ -19,7 +19,7 @@ import javax.ws.rs.core.Response;
 public class ZipCodeAPI {
 
     @Inject
-    ZipcodeDAO zipcodeDAO;
+    GenericEntityDao<ZipCode> zipcodeDAO;
 
     @GET
     public Response getAll() {
