@@ -27,6 +27,7 @@ public class EntityManagerProducer {
         properties.put("javax.persistence.jdbc.user", "");
         properties.put("javax.persistence.jdbc.password", "");
 
+
         properties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         properties.put("hibernate.hikari.minimumIdle", "5");
         properties.put("hibernate.hikari.maximumPoolSize", "10");
